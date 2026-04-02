@@ -2,7 +2,7 @@ import {
     HtmlIcon, CssIcon, JsIcon, ReactIcon, NodeIcon, TsIcon, NextIcon, MysqlIcon, MongoIcon, GdriveIcon, SocketIoIcon, RestApiIcon, PhpIcon, ViteIcon, NextAuthIcon, ReduxIcon, TailwindIcon, ZustandIcon, AstroIcon, NanostoresIcon, D3JsIcon, ReactQueryIcon, EdgeStoreIcon
 } from "../assets/Icons"
 import LaravelIcon from "../assets/Icons/laravel.svg"
-import IbratoursShot from "../assets/Shots/ibratoursshot.webp";
+import IbratoursShot from "../assets/Shots/ibratoursShot.webp";
 import SeaPearlShot from "../assets/Shots/SeaPearlShot.webp"; // T-akkdi men smiya dyal l-image f l-folder
 
 import {
@@ -139,7 +139,7 @@ export const ProjectsList: ProjectsListType = [
         Name: "IbraTours",
         ShortDesc: "A professional tourism platform for managing bus tours and travel bookings, developed in collaboration with IKER.",
         Desc: "IbraTours is a comprehensive web solution for a tourism agency specializing in bus tours and travel services. Developed as part of the IKER development team, the platform features a high-performance front-end built with Next.js for SEO and speed, backed by a robust Laravel API. It manages fleet scheduling, tour bookings, and real-time availability for travelers.",
-        Logo: "", // Hna t-qdri t-diri l-logo dyal IbraTours ila zdtih f Assets
+        Logo: ClimateLogo, // Hna t-qdri t-diri l-logo dyal IbraTours ila zdtih f Assets
         Shot: IbratoursShot, // Hna t-qdri t-7etti screenshot dyal l-site
         Mockup: ClimateMockup,
         Theme: "#2563eb", // Loun blue dyal tourism/professional
