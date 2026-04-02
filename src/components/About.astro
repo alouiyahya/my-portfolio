@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import Avatar_250 from "../my-photo.webp";
+import { SectionTitle } from "./UI";
+---
+
+<section id="about" class="w-full min-h-screen px-6 py-4 pt-14 bg-background">
+    <SectionTitle
+        title="About Me"
+        color="primary"
+        className="h-screen flex flex-col justify-center"
+    >
+        <div class="flex_center flex-col lg:flex-row w-full h-full py-10 gap-8">
+            <Image
+                src={Avatar_250}
+                alt="About_Avatar"
+                class="Fade_Up rounded-full scale-x-[-1] lg:mx-14"
+                width={225}
+                height={225}
+                loading="lazy"
+            />
+
+            <div
+                class="Fade_Up w-full md:w-[80%] lg:w-[60%] flex justify-center items-start flex-col gap-4 lg:border-l border-primary py-8 lg:pl-10"
+            >
+                <h2 class="Fade_Up text-[1.5em] font-bold">Hey there! 👋🏻</h2>
+                <p class="Fade_Up text-justify">
+                    I'm Yahya, a full stack web developer with a strong passion
+                    for crafting digital realms that captivate and inspire.
+                </p>
+                <p class="Fade_Up text-justify">
+                    I am a Fullstack Developer with a strong focus on building scalable and 
+    high-performance web applications. My expertise lies in crafting 
+    modern Front-end interfaces using <span class="gradientText font-bold">React and Next.js</span>, 
+    while architecting robust and secure Back-end solutions with 
+    <span class="gradientText font-bold">Laravel</span>.
+                </p>
+                <p class="Fade_Up text-justify">
+                    If you're seeking a dedicated and passionate web developer,
+                    I'm eager to collaborate with you. Let's bring your ideas to
+                    life!
+                </p>
+            </div>
+        </div>
+
+        <!-- <picture class="flex_center">
+            <source
+                media="(prefers-color-scheme: dark)"
+                srcset="https://raw.githubusercontent.com/ChiragChrg/ChiragChrg/output/github-contribution-grid-snake-dark.svg"
+            />
+            <img
+                alt="github contribution grid snake animation"
+                src="https://raw.githubusercontent.com/ChiragChrg/ChiragChrg/output/github-contribution-grid-snake.svg"
+            />
+        </picture> -->
+    </SectionTitle>
+</section>

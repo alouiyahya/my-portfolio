@@ -1,0 +1,78 @@
+---
+// Loader.astro (The Ultimate Version)
+---
+<div id="loader-wrapper" class="fixed inset-0 z-[10000] flex items-center justify-center bg-transparent overflow-hidden pointer-events-none">
+    
+    <div class="absolute inset-0 flex">
+        <div class="panel w-1/5 h-full bg-[#050505] border-r border-white/5"></div>
+        <div class="panel w-1/5 h-full bg-[#050505] border-r border-white/5"></div>
+        <div class="panel w-1/5 h-full bg-[#050505] border-r border-white/5"></div>
+        <div class="panel w-1/5 h-full bg-[#050505] border-r border-white/5"></div>
+        <div class="panel w-1/5 h-full bg-[#050505]"></div>
+    </div>
+
+    <div class="relative z-20 flex flex-col items-center">
+        <div class="overflow-hidden">
+            <h1 id="loader-logo" class="text-4xl md:text-6xl font-ubuntu font-bold text-white tracking-tighter translate-y-[110%]">
+                YAHYA<span class="text-primary">ALOUI</span>
+            </h1>
+        </div>
+        <div class="w-0 h-[1px] bg-primary mt-4" id="loader-line"></div>
+        <div class="overflow-hidden mt-4">
+            <p id="loader-status" class="text-[10px] tracking-[0.4em] text-white/50 uppercase translate-y-[110%]">
+                Creative Developer ©2026
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    import { gsap } from "gsap";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const panels = document.querySelectorAll(".panel");
+        const logo = document.getElementById("loader-logo");
+        const line = document.getElementById("loader-line");
+        const status = document.getElementById("loader-status");
+        const wrapper = document.getElementById("loader-wrapper");
+
+        // Block scrolling f l-bedya
+        document.body.style.overflow = "hidden";
+        wrapper.style.pointerEvents = "all";
+
+        const tl = gsap.timeline();
+
+        // 1. Reveal Text & Line
+        tl.to(logo, { y: 0, duration: 1, ease: "expo.out" })
+          .to(line, { width: "100%", duration: 0.8, ease: "power2.inOut" }, "-=0.5")
+          .to(status, { y: 0, duration: 0.8, ease: "expo.out" }, "-=0.4");
+
+        // 2. Wait a bit (Wait for the "Wow")
+        tl.to({}, { duration: 0.5 });
+
+        // 3. The Panels Exit (Staggered Animation)
+        tl.to(logo, { y: -50, opacity: 0, duration: 0.5, ease: "power2.in" })
+          .to(status, { y: -20, opacity: 0, duration: 0.3 }, "-=0.3")
+          .to(line, { scaleX: 0, opacity: 0, duration: 0.3 }, "-=0.3")
+          
+          // Hna fin kaykoun l-farq: l-panels kay-t-7erko wa7ed b wa7ed
+          .to(panels, {
+              yPercent: (i) => (i % 2 === 0 ? -100 : 100), // Wa7ed l-fouq, wa7ed l-te7t
+              duration: 1.2,
+              ease: "expo.inOut",
+              stagger: {
+                  amount: 0.3,
+                  from: "center" // Kay-bdaw men l-wsat l-jenb
+              },
+              onComplete: () => {
+                  wrapper.style.display = "none";
+                  document.body.style.overflow = "auto";
+              }
+          }, "-=0.2");
+    });
+</script>
+
+<style>
+    .text-primary { color: #0ea5e9; }
+    .bg-primary { background-color: #0ea5e9; }
+</style>
