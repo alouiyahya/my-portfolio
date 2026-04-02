@@ -1,11 +1,10 @@
 import {
-    HtmlIcon, CssIcon, JsIcon, ReactIcon, NodeIcon, TsIcon, NextIcon, MysqlIcon, MongoIcon, GdriveIcon, SocketIoIcon, RestApiIcon, PhpIcon, ViteIcon, NextAuthIcon, ReduxIcon, TailwindIcon, ZustandIcon, AstroIcon, NanostoresIcon, D3JsIcon, ReactQueryIcon, EdgeStoreIcon
+     ReactIcon,TsIcon, NextIcon, MysqlIcon, MongoIcon, PhpIcon, TailwindIcon
 } from "../assets/Icons"
 import LaravelIcon from "../assets/Icons/laravel.svg"
 
-// --- FIX START: Use ClimateMockup as placeholder to bypass image errors ---
 import {
-    ARMSv1Mockup, ARMSv2Mockup, ARMSv3Mockup, ClimateMockup, DaysbeyondMockup, SrinivasMockup, VortexaMockup, XreconMockup, YoatubeMockup
+     ClimateMockup
 } from "../assets/Mockup"
 
 // Commented out the problematic imports
@@ -14,12 +13,8 @@ import {
 // --- FIX END ---
 
 import {
-    NextmartLogo, ArmsLogo, ArmsPhpLogo, ClimateLogo, CovidtraxLogo, DaysbeyondLogo, FilmstackLogo, PikturesLogo, SrinivasLogo, XReconLogo, YoatubeLogo, VortexaLogo
+    ClimateLogo
 } from "../assets/Logos"
-
-import {
-    NextmartShots, Armsv1Shots, Armsv2Shots , CovidTraxShots, DaysbeyondShots, FilmstackShots, PikturesShots, SrinivasShots, XreconShots, YoatubeShots, VortexaShots, Armsv3Shots
-} from "../assets/Shots"
 
 type ProjectsListType = {
     Name: string,
