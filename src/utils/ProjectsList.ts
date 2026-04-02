@@ -2,7 +2,7 @@ import {
     HtmlIcon, CssIcon, JsIcon, ReactIcon, NodeIcon, TsIcon, NextIcon, MysqlIcon, MongoIcon, GdriveIcon, SocketIoIcon, RestApiIcon, PhpIcon, ViteIcon, NextAuthIcon, ReduxIcon, TailwindIcon, ZustandIcon, AstroIcon, NanostoresIcon, D3JsIcon, ReactQueryIcon, EdgeStoreIcon
 } from "../assets/Icons"
 import LaravelIcon from "../assets/Icons/laravel.svg"
-import IbratoursShot from "../assets/Shots/ibratoursshot.webp";
+import IbratoursShot from "../assets/Shots/Ibratoursshot.webp";
 import SeaPearlShot from "../assets/Shots/SeaPearlShot.webp"; // T-akkdi men smiya dyal l-image f l-folder
 
 import {
